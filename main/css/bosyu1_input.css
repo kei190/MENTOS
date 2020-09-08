@@ -1,0 +1,72 @@
+.main-title{
+	font-size:48px;
+	margin-left:5%;
+}
+.main{
+	margin-left:10%;
+}
+.a input{
+	width:50%;
+	height:30px;
+}
+.b{
+	margin-top:-10px;
+}
+.b input{
+
+	height:150px;
+}
+.c{
+   font-size:20px;
+}
+.d{
+	margin-left:20%;
+	font-size:20px;
+}
+.e input{
+	width:20%;
+	height:30px;
+}
+.f{
+	margin-left:50px;
+	font-size:20px;
+}
+.g input{
+	margin-left:4.5%;
+	width:20%;
+	height:30px;
+}
+.h{
+	margin-left:20%;
+	font-size:20px;
+}
+.i input{
+	margin-left:8%;
+	width:10%;
+	height:30px;
+}
+.j{
+	margin-top:10px;
+	padding-left:58.5%;
+}
+.j input{
+	width:30%;
+	height:40px;
+}
+.sns p {
+	 font-size:25px;
+}
+.sns label{
+	font-size:20px;
+}
+.k{
+	margin-left:20%;
+}
+.l{
+	float:right;
+	margin-right:37%;
+}
+.l input{
+	margin-top:10px;
+}
+
