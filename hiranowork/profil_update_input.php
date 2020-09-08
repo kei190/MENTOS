@@ -14,6 +14,7 @@
 	<form action="plofil_update_output,php" method="post">
         <h2 style="text-align: left; padding-left: 90px; padding-bottom: 25px">プロフィール変更</h2>
         <?php
+			echo 'あ';
             session_start();
             $pdo = new PDO('mysql:host=mysql157.mentosu2.sakura.ne.jp;dbname=mentosu2_ogawa;charset=utf8','mentosu2','zvpg7916');
             $sql2 = $pdo -> prepare('select * from profile where user_id = ?');
