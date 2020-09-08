@@ -198,5 +198,7 @@
     echo '</table>';
 ?>
 </div>
+
+<a href = "home.php"><input type="submit" value="ホームに戻る" style="height: 40px; width: 80px; background-color: #A9D18E"></a>
 </body>
 </html>
