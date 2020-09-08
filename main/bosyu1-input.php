@@ -40,9 +40,9 @@ $_SESSION['categoly']=$_POST['categoly'];
     			</div>
     			<div class="sns">
     			<p>連絡可能なSNSを選択</p>
-        			<label><input type="checkbox" name="check" value="F">Facebook</label>
-     				<label class="k"><input type="checkbox" name="check" value="I">Instagram</label>
-      				<label class="k"><input type="checkbox" name="check" value="T">Twitter</label>
+        			<label><input type="checkbox" name="check[]" value="F">Facebook</label>
+     				<label class="k"><input type="checkbox" name="check[]" value="I">Instagram</label>
+      				<label class="k"><input type="checkbox" name="check[]" value="T">Twitter</label>
     			</div>
 				<span class="l"><input type="submit" value="確認"style="padding:10px;font-size:20px;background-color:#C5E0B4;"></span>
 			</form>
