@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>コロナで出会っちゃった!? てへっ☆</title>
+<link href="kakunin.css" rel="stylesheet">
 </head>
 <body>
 <form action="kanryou.php" method="post">
@@ -40,7 +41,7 @@ if($result == false && $result2 == false){
 <?php
 }else {
     echo '<h1>'.'登録失敗'.'</h1>';
-    echo '<p>'.'登録に失敗しました。このアカウントは既に存在しています。'."\n".'別のメールアドレスを使用してください'.'</p>';
+    echo '<p>'.'登録に失敗しました。このアカウントは既に存在しています。'."\n".'別のメールアドレスまたはユーザーIDを使用してください'.'</p>';
     ?>
     <p><input type="button" onclick="location.href='/MENTOS/yoshidomework/sinki/touroku.php'"  value="戻る">
 <?php

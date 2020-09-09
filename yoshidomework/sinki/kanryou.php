@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>コロナで出会っちゃった!? てへっ☆</title>
+<link href="kanryou.css" rel="stylesheet">
 </head>
 <body>
 <form action="profil_input.php" method="post">

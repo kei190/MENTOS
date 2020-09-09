@@ -21,7 +21,7 @@ foreach($sql as $row){
 
 ?>
 <form action="keijiban_toukou.php" method="post">
-<button onclick="location.href='/MENTOS/yoshidomework/sinki/home.php'">ホームに戻る</button>
+<button onclick="location.href='/MENTOS/yoshidomework/sinki/home.php'" name="lolol">ホームに戻る</button>
 <input type="submit" value="投稿する">
 </form>
 </body>
