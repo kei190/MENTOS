@@ -19,7 +19,7 @@ $sql -> execute([$_SESSION['keiji_id']]);*/
 ?>
 <div>
 	<div>
-        <p><img src="../gazou/<?php echo $_sql['gazou']?>.png" alt="の画像"></p>
+        <p><img src="../gazou/<?php echo $_sql['icon']?>.png" alt="アイコンの画像"></p>
         <p><?php /* echo $_SESSION["login_mail_id"]; */?>aaa</p>
     </div>
     <div>

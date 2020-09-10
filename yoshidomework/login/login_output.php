@@ -9,12 +9,24 @@
 session_start();
 $pdo = new PDO('mysql:host=mysql57.mentosu2.sakura.ne.jp;dbname=mentosu2_ogawa;charset=utf8',
     'mentosu2', 'zvpg7916');
-$sql = $pdo->prepare('SELECT * FROM korona_user where (user_id=? or mail=?) and password=?');
-$sql -> execute([$_POST['login_mail_id'],$_POST['login_mail_id'],$_POST['login_pass']]);
+$sql = $pdo->prepare('SELECT * FROM korona_user where user_id=? and password=?');
+$sql -> execute([$_POST['login_id'],$_POST['login_pass']]);
 $result = $sql->fetch();
-if($result){
+
+$pdo = new PDO('mysql:host=mysql57.mentosu2.sakura.ne.jp;dbname=mentosu2_ogawa;charset=utf8',
+    'mentosu2', 'zvpg7916');
+$sql2 = $pdo->prepare('SELECT * FROM korona_user where mail=? and password=?');
+$sql2 -> execute([$_POST['login_id'],$_POST['login_pass']]);
+$result2 = $sql->fetch();
+
+if($result == true){
     unset($_SESSION['login_false']);
-    $_SESSION["login_mail_id"] = $_POST['login_mail_id'];
+    $_SESSION["login_id"] = $_POST['login_id'];
+    $_SESSION["login_pass"] = $_POST['login_pass'];
+    header('Location: home.php');
+}else if($result2 == true){
+    unset($_SESSION['login_false']);
+    $_SESSION["login_id"] = $_POST['login_id'];
     $_SESSION["login_pass"] = $_POST['login_pass'];
     header('Location: home.php');
 }else{

@@ -16,11 +16,11 @@
         <p>アイコン
         <?php
             $img=[
-                'boy.png', 'girl.png','cat.png','penguin.png','usagi.png'
+                'icon_chita_256.png', 'icon_man_256.png','icon_panda_256.png','icon_rady_256.png','icon_shikoutei_256.png','icon_syatyo_256.png'
             ];
 
             foreach ($img AS $key){
-                echo '<input type="radio" name="icon"><img src="', $key, '"  style="width: 100px; height: 100px">';
+                echo '<input type="radio" name="icon"><img src= "img/', $key, '"  style="width: 100px; height: 100px">';
             }
         ?>
         </p>

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>コロナで出会っちゃった!? てへっ☆</title>
+<link href="touroku.css" rel="stylesheet">
 </head>
 <body>
 <h1>新規会員登録</h1>
