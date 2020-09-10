@@ -1,7 +1,6 @@
 
 <?php
     session_start();
-    header('Location: bosyu1.php');
 
 
     if (isset($_POST['twitter'])) {
@@ -22,7 +21,9 @@
         $facebook = null;
     }
 
-    $pdo = new PDO('mysql:host=mysql157.mentosu2.sakura.ne.jp;dbname=mentosu2_ogawa;charset=utf8','mentosu2','zvpg7916');
+    /* $pdo = new PDO('mysql:host=mysql157.mentosu2.sakura.ne.jp;dbname=mentosu2_ogawa;charset=utf8','mentosu2','zvpg7916');*/
+    $pdo = new PDO('mysql:host=localhost;dbname=shop;charset=utf8',
+        'staff', 'password');
     $sql1 = $pdo -> prepare('INSERT INTO profile VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
 
     if (empty($sql1 ->fetchAll())) {

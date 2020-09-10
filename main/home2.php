@@ -16,34 +16,23 @@
 $pdo = new PDO('mysql:host=localhost;dbname=shop;charset=utf8',
 'staff', 'password');
 $sql2 = $pdo->prepare('SELECT * FROM profile where user_id=?');
-$sql2 -> execute([$_SESSION["login_id"]]);
+$sql2 -> execute(['name']);
 
 ?>
 <?php foreach($sql2 as $sql){?>
-<?php $a=$sql['icon']?>
-<?php $a=$sql['icon']
-       file
-?>
 <div>
 	<div>
-        <p><img src="<?php echo $a?>" alt="アイコンの画像"></p>
+        <p><img src="../gazou/<?php echo $_sql['icon']?>.png" alt="アイコンの画像"></p>
         <p><?php echo $_SESSION["login_id"]; ?></p>
     </div>
     <div>
         <p><?php echo $sql['user_name']; ?></p>
         <p><?php echo $sql['comment']; ?></p>
     </div>
-    <div>
-    	<p><input type="button" onclick="location.href='/MENTOS/hiranowork/profil_update_input.php'" value="変更"></p>
-	</div>
-	<form action=".php" method="post">
-	<p>ユーザー検索<br>
-        <input type="submit" value="検索">
-    </p>
-	</form>
 </div>
 <hr color="blue">
 <div>
+
     <div>
         <p>生年月日<br>
         <input type="text" value="<?php echo $sql['birth'];?>" readonly></p>
@@ -64,15 +53,13 @@ $sql2 -> execute([$_SESSION["login_id"]]);
         <p>今欲しい物<br>
         	<textarea name="now_get" cols="60" rows="5" readonly><?php echo $sql['now_get'];?></textarea></p>
     </div>
-    <div>
-         <p><input type="button" onclick="location.href='/MENTOS/yoshidomework/sinki/*.php'" value="新しい通知"></p>
-    </div>
-    <div>
-        <p><input type="button" onclick="location.href='/MENTOS/yoshidomework/sinki/*.php'" value="参加予定の確認"></p>
-    </div>
+</div>
+<footer>
+<div>
+
 </div>
 
-<footer></footer>
+</footer>
 <?php }?>
 </body>
 </html>

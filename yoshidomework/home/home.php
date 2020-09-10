@@ -21,7 +21,9 @@ $sql2 -> execute([$_SESSION["login_id"]]);
 ?>
 <?php foreach($sql2 as $sql){?>
 <?php $a=$sql['icon']?>
-<?php echo $a;?>
+<?php $a=$sql['icon']
+       file
+?>
 <div>
 	<div>
         <p><img src="<?php echo $a?>" alt="アイコンの画像"></p>
