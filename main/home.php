@@ -20,11 +20,9 @@ $sql2 -> execute([$_SESSION["login_id"]]);
 
 ?>
 <?php foreach($sql2 as $sql){?>
-<?php $a=$sql['icon']?>
-<?php echo $a;?>
 <div>
 	<div>
-        <p><img src="<?php echo $a?>" alt="アイコンの画像"></p>
+        <p><img src="<?php echo $sql['icon']?>" alt="アイコンの画像"></p>
         <p><?php echo $_SESSION["login_id"]; ?></p>
     </div>
     <div>

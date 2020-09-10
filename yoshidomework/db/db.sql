@@ -1,4 +1,7 @@
-create database testdate;
+drop database if exists testdate;
+create database testdate default character set utf8 collate utf8_general_ci;
+grant all on testdate.* to 'staff'@'localhost' identified by 'password';
+use testdate;
 
 create table bosyu
 (user_id varchar(256) not null,
