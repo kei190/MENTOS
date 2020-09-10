@@ -3,23 +3,20 @@
 <head>
 <title>コロナで出会っちゃった!? てへっ☆</title>
 <link rel="stylesheet" href="css/sanka-input.css">
-<?php
-$_SESSION['categoly']=$_POST['categoly'];
-?>
 </head>
 <body>
+<div class="main-title">
+			<p>参加予定の詳細</p>
+		</div>
 <?php
 $pdo=new PDO('mysql:host=mysql57.mentosu2.sakura.ne.jp;dbname=mentosu2_ogawa;charset=utf8','mentosu2','zvpg7916');
-$sql=$pdo->prepare('select COUNT(*) as  count from bosyu where categoly_id = ?');
-$sql -> execute([$_SESSION[categoly]]);
+$sql=$pdo->prepare('select * from bosyu where categoly_id = ? and user_id = ?');
+$sql -> execute([$_SESSION[categoly],$_SESSION[userid]]);
 foreach($sql as $row){
- ?>
- <div class="main-title">
-			<p>参加内容</p>
-</div>
- <form action="sendmiddole.php" method="post">
+?>
+
+<form action="sanka-finish.php" method="post">
            <div class="a">
-           <input type="text" name="name" value=<?php  echo $row['user_id'];?> readonly>
            <input type="text" name="title" value=<?php  echo $row['tema'];?> readonly>
            </div>
             <div class="b">
@@ -60,9 +57,9 @@ foreach($sql as $row){
         			    }
         			?>
         			</div>
-    				<span class="l"><input type="submit" value="詳細を見る"style="padding:10px;font-size:20px;background-color:#C5E0B4;"></span>
+    				<span class="l"><input type="submit" value="申し込む"style="padding:10px;font-size:20px;background-color:#C5E0B4;"></span>
     			</form>
-<?php
+    <?php
 }
 ?>
 </body>

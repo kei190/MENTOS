@@ -22,7 +22,7 @@ if(!empty(nin)){
     $_SESSION['nin']=null;
 }
 $pdo=new PDO('mysql:host=mysql57.mentosu2.sakura.ne.jp;dbname=mentosu2_ogawa;charset=utf8','mentosu2','zvpg7916');
-$sql=$pdo->prepare('insert into bosyu values(?,?,?,?,?,?,?,?,?)');
+$sql=$pdo->prepare('insert into bosyu values(?,?,?,?,?,?,?,?,?,null)');
 if($sql->execute($_SESSION['login_id'],$_POST['title'],$_POST['comment'],$_SESSION['start'],$_SESSION['end'],$_POST['keisai'],$_SESSION['nin'],$_SESSION['categoly'],$_SESSION['sns'])){
     echo '<p class="title">募集の完了</p>';
     echo '<p class="subtitle">募集に成功しました</p>';
