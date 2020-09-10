@@ -18,18 +18,18 @@
             session_start();
             $pdo = new PDO('mysql:host=mysql157.mentosu2.sakura.ne.jp;dbname=mentosu2_ogawa;charset=utf8','mentosu2','zvpg7916');
             $sql2 = $pdo -> prepare('select * from profile where user_id = ?');
-            $sql2 ->execute([$_SESSION['name_id']]);
+            $sql2 ->execute([$_SESSION['login_id']]);
             echo '<p>アイコン';
 
             $img=[
-                'boy.png', 'girl.png','cat.png','penguin.png','usagi.png'
+                'icon_chita_256.png', 'icon_man_256.png','icon_panda_256.png','icon_rady_256.png','icon_shikoutei_256.png','icon_syatyo_256.png'
             ];
 
             foreach ($img AS $key){
                 if ($key == $sql2['icon']){
-                    echo '<input type="radio" chacked="checked" name="icon"><img src="', $key, '"  style="width: 100px; height: 100px">';
+                    echo '<input type="radio" chacked="checked" name="icon"><img src= "img/', $key, '"  style="width: 100px; height: 100px">';
                 }else{
-                    echo '<input type="radio" name="icon"><img src="', $key, '"  style="width: 100px; height: 100px">';
+                    echo '<input type="radio" name="icon"><img src= "img/', $key, '"  style="width: 100px; height: 100px">';
                 }
             }
 
