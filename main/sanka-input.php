@@ -8,15 +8,15 @@ $_SESSION['categoly']=$_POST['categoly'];
 ?>
 </head>
 <body>
+<div class="main-title">
+			<p>参加内容</p>
+</div>
 <?php
 $pdo=new PDO('mysql:host=mysql57.mentosu2.sakura.ne.jp;dbname=mentosu2_ogawa;charset=utf8','mentosu2','zvpg7916');
-$sql=$pdo->prepare('select COUNT(*) as  count from bosyu where categoly_id = ?');
+$sql=$pdo->prepare('select * from bosyu where categoly_id = ?');
 $sql -> execute([$_SESSION[categoly]]);
 foreach($sql as $row){
  ?>
- <div class="main-title">
-			<p>参加内容</p>
-</div>
  <form action="sendmiddole.php" method="post">
            <div class="a">
            <input type="text" name="name" value=<?php  echo $row['user_id'];?> readonly>
