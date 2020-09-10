@@ -13,26 +13,25 @@
 /* $pdo = new PDO('mysql:host=mysql57.mentosu2.sakura.ne.jp;dbname=mentosu2_ogawa;charset=utf8',
     'mentosu2', 'zvpg7916');
 
-$sql = $pdo->prepare('SELECT * FROM profile where user_id=? or mail=?');
-$sql -> execute([$_SESSION["login_mail_id"],$_SESSION["login_mail_id"]]);*/
+$sql = $pdo->prepare('SELECT * FROM profile where user_id=?');
+$sql -> execute([$_SESSION["login_id"]]);*/
 
 ?>
 <div>
 	<div>
-        <p><img src="../gazou/<?php echo $_sql['gazou']?>.png" alt="の画像"></p>
-        <p><?php /* echo $_SESSION["login_mail_id"]; */?>aaa</p>
+        <p><img src="../../gazou/<?php echo $_sql['icon']?>.png" alt="アイコンの画像"></p>
+        <p><?php /* echo $_SESSION["login_id"]; */?>aaa</p>
     </div>
     <div>
         <p><?php /* echo $sql['user_name']; */?>bbb</p>
         <p><?php /* echo $sql['comment']; */?>ccc</p>
     </div>
     <div>
-    	<p><input type="button" onclick="location.href='/MENTOS/yoshidomework/sinki/touroku.php'" value="変更"></p>
+    	<p><input type="button" onclick="location.href='/MENTOS/yoshidomework/sinki/profil_update_input.php'" value="変更"></p>
 	</div>
 </div>
 <hr color="blue">
 <div>
-    <div>
     <div>
         <p>生年月日<br>
         <input type="text" value="<?php echo $sql['birth'];?>" readonly></p>
@@ -54,24 +53,13 @@ $sql -> execute([$_SESSION["login_mail_id"],$_SESSION["login_mail_id"]]);*/
         	<textarea name="now_get" cols="60" rows="5" readonly><?php echo $sql['now_get'];?></textarea></p>
     </div>
     <div>
-         <p><input type="button" onclick="location.href='/MENTOS/yoshidomework/sinki/touroku.php'" value="新しい通知"></p>
+         <p><input type="button" onclick="location.href='/MENTOS/yoshidomework/sinki/*.php'" value="新しい通知"></p>
     </div>
-    </div>
-        <p><input type="button" onclick="location.href='/MENTOS/yoshidomework/sinki/touroku.php'" value="参加予定の確認"></p>
-</div>
-<footer>
-<div>
     <div>
-    <button onclick="location.href='/MENTOS/yoshidomework/sinki/touroku.php'">kkk</button>
-    <button onclick="location.href='/MENTOS/yoshidomework/sinki/touroku.php'">kkk</button>
-    <button onclick="location.href='/MENTOS/yoshidomework/sinki/touroku.php'">kkk</button>
-    <button onclick="location.href='/MENTOS/yoshidomework/sinki/touroku.php'">kkk</button>
-    <button onclick="location.href='/MENTOS/yoshidomework/sinki/touroku.php'">kkk</button>
+        <p><input type="button" onclick="location.href='/MENTOS/yoshidomework/sinki/*.php'" value="参加予定の確認"></p>
     </div>
-
 </div>
-
-</footer>
+<footer></footer>
 
 </body>
 </html>
