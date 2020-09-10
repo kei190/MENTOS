@@ -50,10 +50,10 @@
         <p>　　 Instagram　　<input type="checkbox" name="instagram"><input type="text" name="insta_id" style="width: 300px; height: 35px;"></p>
         <p>　　 Facebook 　　<input type="checkbox" name="facebook"><input type="text" name="face_id" style="width: 300px; height: 35px;"></p>
         <p>SNSのアカウントを持っていない場合は、どれか一つ新規登録をしてください。</p>
-        <a href = "https://twitter.com/i/flow/signup">Twitter</a>
-        <a href = "https://www.instagram.com/accounts/emailsignup/?hl=ja">Instagram</a>
-        <a href = "https://www.facebook.com/campaign/landing.php?campaign_id=1665596389&extra_1=s%7Cc%7C321610682049%7Ce%7Cfacebook%7C&placement=&creative=321610682049&keyword=facebook&partner_id=googlesem&extra_2=campaignid%3D1665596389%26adgroupid%3D65075436220%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-541132862%26loc_physical_ms%3D1009717%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQjw7sz6BRDYARIsAPHzrNIrt1BEuKWagvg_9syeRU_UsxwBTYL60c8qbORRUqPXwA1bwvLwzmoaAuk8EALw_wcB">Facebook</a>
-        <p><input type="submit" value="完了" style="height: 40px; width: 80px; background-color: #A9D18E"></p>
+        <a href = "https://twitter.com/i/flow/signup" style="margin-left: 30px">Twitter</a>
+        <a href = "https://www.instagram.com/accounts/emailsignup/?hl=ja" style="margin-left: 30px">Instagram</a>
+        <a href = "https://www.facebook.com/campaign/landing.php?campaign_id=1665596389&extra_1=s%7Cc%7C321610682049%7Ce%7Cfacebook%7C&placement=&creative=321610682049&keyword=facebook&partner_id=googlesem&extra_2=campaignid%3D1665596389%26adgroupid%3D65075436220%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-541132862%26loc_physical_ms%3D1009717%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQjw7sz6BRDYARIsAPHzrNIrt1BEuKWagvg_9syeRU_UsxwBTYL60c8qbORRUqPXwA1bwvLwzmoaAuk8EALw_wcB" style="margin-left: 30px">Facebook</a>
+        <input type="submit" value="完了" style="height: 40px; width: 80px; background-color: #A9D18E">
 	</form>
 </div>
 </body>
