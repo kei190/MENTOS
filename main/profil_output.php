@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+
 <?php
     session_start();
+    header('Location: bosyu1.php');
+
 
     if (isset($_POST['twitter'])) {
         $twitter = $_POST['twitter_id'];
@@ -31,9 +27,7 @@
 
     if (empty($sql1 ->fetchAll())) {
         if ($sql1 -> execute([$_POST['user_name'], $_POST['icon'], $_POST['birth'], $_POST['syussin'], $_POST['job'], $_POST['hobby'], $_POST['tokugi'], $_POST['myboom'], $_POST['love_singer'], $_POST['now_get'], $_POST['comment'], $twitter, $instagram, $facebook, $_SESSION['login_id']])) {
-            header('Location: "home.php"');
+            header('Location: home.php');
         };
     }
 ?>
-</body>
-</html>

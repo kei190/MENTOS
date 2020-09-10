@@ -11,7 +11,7 @@
 </header>
 
 <div style="text-align: center; padding-top: 40px">
-	<form action="plofil_output,php" method="post">
+	<form action="profil_output.php" method="post">
         <h2 style="text-align: left; padding-left: 90px; padding-bottom: 25px">プロフィール作成</h2>
         <p>アイコン
         <?php

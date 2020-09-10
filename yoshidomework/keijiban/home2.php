@@ -12,24 +12,27 @@
 <?php session_start();
 /* $pdo = new PDO('mysql:host=mysql57.mentosu2.sakura.ne.jp;dbname=mentosu2_ogawa;charset=utf8',
     'mentosu2', 'zvpg7916');
-
-$sql = $pdo->prepare('SELECT * FROM profile where user_id=?');
-$sql -> execute([$_SESSION['keiji_id']]);*/
+*/
+$pdo = new PDO('mysql:host=localhost;dbname=shop;charset=utf8',
+'staff', 'password');
+$sql2 = $pdo->prepare('SELECT * FROM profile where user_id=?');
+$sql2 -> execute(['name']);
 
 ?>
+<?php foreach($sql2 as $sql){?>
 <div>
 	<div>
         <p><img src="../gazou/<?php echo $_sql['icon']?>.png" alt="アイコンの画像"></p>
-        <p><?php /* echo $_SESSION["login_mail_id"]; */?>aaa</p>
+        <p><?php echo $_SESSION["login_id"]; ?></p>
     </div>
     <div>
-        <p><?php /* echo $sql['user_name']; */?>bbb</p>
-        <p><?php /* echo $sql['comment']; */?>ccc</p>
+        <p><?php echo $sql['user_name']; ?></p>
+        <p><?php echo $sql['comment']; ?></p>
     </div>
 </div>
 <hr color="blue">
 <div>
-    <div>
+
     <div>
         <p>生年月日<br>
         <input type="text" value="<?php echo $sql['birth'];?>" readonly></p>
@@ -53,17 +56,10 @@ $sql -> execute([$_SESSION['keiji_id']]);*/
 </div>
 <footer>
 <div>
-    <div>
-    <button onclick="location.href='/MENTOS/yoshidomework/sinki/touroku.php'">kkk</button>
-    <button onclick="location.href='/MENTOS/yoshidomework/sinki/touroku.php'">kkk</button>
-    <button onclick="location.href='/MENTOS/yoshidomework/sinki/touroku.php'">kkk</button>
-    <button onclick="location.href='/MENTOS/yoshidomework/sinki/touroku.php'">kkk</button>
-    <button onclick="location.href='/MENTOS/yoshidomework/sinki/touroku.php'">kkk</button>
-    </div>
 
 </div>
 
 </footer>
-
+<?php }?>
 </body>
 </html>
