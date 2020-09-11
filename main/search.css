@@ -1,0 +1,26 @@
+.search{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	padding:15px 30px;
+	text-align:center;
+	width:500px;
+}
+button{
+	font-size:10px;
+	font-size:15px;
+	padding:10px 30px;
+	background-color:#A9D18E;
+	border-style:nane;
+}
+p{
+	position:absolute;
+	top:35%;
+	left:20%;
+	transform:translate(-50%,-50%);
+	padding:15px 30px;
+	text-align:center;
+	width:400px;
+	font-size:25px;
+}

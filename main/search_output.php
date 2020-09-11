@@ -1,26 +1,23 @@
-<!DOCTYPE html>
+<?php require 'header.html';?>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>コロナで出会っちゃった!? てへっ☆</title>
-
-<link href="home.css" rel="stylesheet">
+<link href = "search.css" rel = "stylesheet">
+<title>Insert title here</title>
 </head>
-
-<hr color="blue">
 <body>
-<?php session_start();
-/* $pdo = new PDO('mysql:host=mysql57.mentosu2.sakura.ne.jp;dbname=mentosu2_ogawa;charset=utf8',
-    'mentosu2', 'zvpg7916');
-*/
+<div class = "search">
+<?php
+/*$pdo = new PDO('mysql:host=mysql157.mentosu2.sakura.ne.jp;dbname=mentosu2_ogawa;charset=utf8','mentosu2','zvpg7916');*/
 $pdo = new PDO('mysql:host=localhost;dbname=shop;charset=utf8',
 'staff', 'password');
-$sql2 = $pdo->prepare('SELECT * FROM profile where user_id=?');
-$sql2 -> execute([$_POST['id']]);
+$sql2 = $pdo -> prepare('select * from profile where user_id = ?');
+$sql2 -> execute([$_POST['search']]);
+$result = $sql2 -> fetch(PDO::FETCH_ASSOC);
+if($result){
+     foreach($sql2 as $sql){
+     $a=$sql['icon']?>
 
-?>
-<?php foreach($sql2 as $sql){?>
-<?php $a=$sql['icon']?>
 <div>
 	<div>
         <p><img src="img/<?php echo $a?>" alt="アイコンの画像"></p>
@@ -48,7 +45,6 @@ $sql2 -> execute([$_POST['id']]);
 </div>
 <hr color="blue">
 <div>
-
     <div>
         <p>生年月日<br>
         <input type="text" value="<?php echo $sql['birth'];?>" readonly></p>
@@ -70,12 +66,17 @@ $sql2 -> execute([$_POST['id']]);
         	<textarea name="now_get" cols="60" rows="5" readonly><?php echo $sql['now_get'];?></textarea></p>
     </div>
 </div>
-<footer>
-<div>
 
+<?php }
+
+}else{
+    echo '入力されたユーザIDを持つユーザは存在しません。<br>
+          再度入力し直してください。<br>';
+    echo '<a href = "search_input.php">検索画面に戻る</a>';
+
+}
+?>
 </div>
-
-</footer>
-<?php }?>
 </body>
 </html>
+<?php require 'footer.html'; ?>

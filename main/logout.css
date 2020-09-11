@@ -1,0 +1,26 @@
+
+.center{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	padding:15px 30px;
+	text-align:center;
+	width:300px;
+}
+button{
+	font-size:20px;
+	padding:10px 30px;
+	background-color:#A9D18E;
+	border-style:nane;
+}
+.out{
+	font-size:25px;
+}
+.p{
+	font-size:25px;
+}
+a {
+	text-decoration:none;
+	font-size:20px;
+}

@@ -20,7 +20,7 @@
             ];
 
             foreach ($img AS $key){
-                echo '<input type="radio" name="icon"><img src= "img/', $key, '"  style="width: 100px; height: 100px">';
+                echo '<input type="radio" name="icon" value="'.$key.'"><img src= "img/', $key, '"  style="width: 100px; height: 100px">';
             }
         ?>
         </p>

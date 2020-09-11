@@ -38,7 +38,7 @@ if($result == false && $result2 == false){
     <p>ユーザーID</p>
     <?php
     echo $_POST['sinki_id'];
-    $_SESSION['sinki_id'] = $_POST['sinki_id'];
+    $_SESSION['login_id'] = $_POST['sinki_id'];
     ?>
     <p><input type="button" onclick="location.href='/MENTOS/yoshidomework/sinki/touroku.php'"  value="変更"> <input type="submit" value="登録"></p>
 <?php

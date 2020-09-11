@@ -33,12 +33,12 @@ if($result == true){
         unset($_SESSION['login_false']);
         $_SESSION["login_id"] = $id;
         $_SESSION["login_pass"] = $_POST['login_pass'];
-        header('Location: /MENTOS/yoshidomework/home/home.php');
+        header('Location: home.php');
     }else{
     unset($_SESSION['login_false']);
     $_SESSION["login_id"] = $_POST['login_mail_id'];
     $_SESSION["login_pass"] = $_POST['login_pass'];
-    header('Location: /MENTOS/yoshidomework/home/home.php');
+    header('Location: home.php');
     }
 }else{
     $_SESSION["login_false"] = 1;

@@ -15,7 +15,7 @@ session_start();
 $pdo = new PDO('mysql:host=localhost;dbname=shop;charset=utf8',
 'staff', 'password');
 $sql = $pdo->prepare('INSERT INTO korona_user VALUES(?,?,?)');
-$sql -> execute([$_SESSION['sinki_id'],$_SESSION['sinki_mail'],$_SESSION['sinki_pass']]);
+$sql -> execute([$_SESSION['login_id'],$_SESSION['sinki_mail'],$_SESSION['sinki_pass']]);
 ?>
 <h1>登録完了</h1>
 <p>登録が完了しました。</p>

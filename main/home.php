@@ -1,3 +1,4 @@
+<?php require 'header.html'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,8 +7,6 @@
 
 <link href="home.css" rel="stylesheet">
 </head>
-<header align="center"><h1>コロナで出会っちゃった!? てへっ☆</h1></header>
-<hr color="blue">
 <body>
 <?php session_start();
 /* $pdo = new PDO('mysql:host=mysql57.mentosu2.sakura.ne.jp;dbname=mentosu2_ogawa;charset=utf8',
@@ -21,12 +20,10 @@ $sql2 -> execute([$_SESSION["login_id"]]);
 ?>
 <?php foreach($sql2 as $sql){?>
 <?php $a=$sql['icon']?>
-<?php $a=$sql['icon']
-       file
-?>
+
 <div>
 	<div>
-        <p><img src="<?php echo $a?>" alt="アイコンの画像"></p>
+        <p><img src="img/<?php echo $a?>" alt="アイコンの画像"></p>
         <p><?php echo $_SESSION["login_id"]; ?></p>
     </div>
     <div>
@@ -36,8 +33,23 @@ $sql2 -> execute([$_SESSION["login_id"]]);
     <div>
     	<p><input type="button" onclick="location.href='/MENTOS/hiranowork/profil_update_input.php'" value="変更"></p>
 	</div>
-	<form action=".php" method="post">
-	<p>ユーザー検索<br>
+	<div>
+	<p>
+	<label for="twitter">Twitter</label>
+        <input type="text" value="<?php echo $sql['twitter_id'];?>" id="twitter" readonly></p>
+	</div>
+	<div>
+	<p>
+	<label for="instagram">Instagram</label>
+        <input type="text" value="<?php echo $sql['insta_id'];?>" id="instagram" readonly></p>
+	</div>
+	<div>
+	<p>
+	<label for="facebook">Facebook</label>
+        <input type="text" value="<?php echo $sql['face_id'];?>" id="facebook" readonly></p>
+	</div>
+	<form action="search_input.php" method="post">
+	<p>ユーザー検索
         <input type="submit" value="検索">
     </p>
 	</form>
@@ -72,7 +84,6 @@ $sql2 -> execute([$_SESSION["login_id"]]);
     </div>
 </div>
 
-<footer></footer>
 <?php }?>
 </body>
 </html>
